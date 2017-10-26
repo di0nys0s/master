@@ -1,0 +1,79 @@
+EXPLICATIONS DU FICHIER D'ENTREES
+ fichier1='<fonctions d'onde - amplitude de proba>'
+ fichier2='<paquets d'ondes - proba>'
+ fichier3='<Spectre KE de dissociation sur sigma_g>'
+ fichier4='<Spectre KE de dissociation sur sigma_u>'
+ fichier5='<Spectre KE de dissociation total>'
+
+ delt = delat t en u.a.
+
+ tf = temps final en u.a.
+
+ t0 = temps definissant le milieu du pulse. Si t0 = 0, intensite maximale
+      des le debut de la propagation
+
+ sig = FWHM de la monte et de la descente du pulse en u.a.
+
+ width = longeur du plateau du pulse en u.a.
+
+ intens = intensite laser en u.a.
+
+ freq = frequence du champ en cm-1
+
+ phase = phase du champ est donnee par pi/phase
+
+ npos = nb de points sur grille spatiale
+
+ npbig = nb de points sur grille spatiale pour propagation asymptotique
+
+ rdeb = Valeur du debut de la grille en R en u.a.
+
+ rmax = Valeur de la fin de la grille en R en u.a.
+
+ seuil = seuil du declenchement de l'analyse asymptotique
+
+ r0cut = point ou se fait le splitting pour analyse asymptotique en u.a.
+
+ scut = pente de la coupure
+
+ Etatpro = .True. pour utiliser un etat propre de H_2^+, .False. pour utiliser
+           v=0 de H_2 comme etat initial
+
+ nudep = Si Etatpro = .True., determine le v de l'etat initial
+
+ xmu = masse en unite de la masse de l'electron
+
+	 1 fs = 41.3707011 u.a.
+
+ xinten= Intensite du champ en u.a.
+	 I(w/cm²)=3.520d16 * E(u.a.)²
+
+ metint = 0 integration by trapezoide rules
+ metint = 1 integration by dquad subroutine
+
+ &iofile
+  fichier1 = 'psip.dts',
+  fichier2 = 'psi2p.dts',
+  fichier3 = 'psik1.dts',
+  fichier4 = 'psik2.dts',
+  fichier5 = 'psiktot.dts',
+  delt=2.d0,
+  tf =32000.d0,
+  t0 =0.0d0,
+  tw=29600.d0,
+  omega = 0.18374246656d0,
+  intens = 0.137688918d0,
+  freq =  950.0d0,
+  phase =0.5d0,
+  gama=0.0d0,
+  npos = 2048,
+  npbig = 4096,
+  rdeb = 1.05d0,
+  rmax = 56.7d0,
+  seuil = 5.d-2,
+  r0cut =34.026d0,
+  scut = 4.72d-1,
+  metint=0
+  beta=0.00d0
+  tc=5000.d0
+ &end
